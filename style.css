@@ -1,0 +1,149 @@
+/* GOOGLE FONTS (PREMIUM) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap');
+
+/* FULL PAGE RESET */
+[data-testid="stApp"] {
+    background: linear-gradient(135deg, #050b18, #020409);
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* REMOVE STREAMLIT HEADER */
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* MAIN CONTENT WIDTH */
+.block-container {
+    max-width: 1400px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* HERO TITLE */
+h1 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 60px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ffffff, #bca7a7, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+p {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: #c7d2ff;
+}
+
+/* FORM CARD */
+[data-testid="stVerticalBlock"] {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+/* SLIDER LABELS */
+label {
+    font-size: 18px !important;
+    font-weight: 600;
+    color: #ffffff !important;
+}
+
+/* SLIDER BAR */
+[data-testid="stSlider"] span {
+    background: linear-gradient(90deg, #00eaff, #0050ff);
+}
+
+/* SELECT BOX */
+[data-testid="stSelectbox"] > div {
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    color: white;
+}
+
+/* BUTTON */
+.stButton > button {
+    font-family: 'Space Grotesk', sans-serif;
+    background: linear-gradient(135deg, #00eaff, #0050ff);
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.stButton > button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,234,255,0.9);
+}
+
+/* WARNING */
+.custom-warning {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    color: #ff7a7a !important;
+    font-size: 18px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid rgba(255, 50, 50, 0.35);
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* RESULT */
+.result-card {
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0,234,255,0.15), rgba(0,80,255,0.15));
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 50px rgba(0,234,255,0.6);
+}
+
+.result-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #c7f9ff;
+}
+
+.result-score {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+}
+
+/* ===============================
+   REMOVE STREAMLIT HIGHLIGHT
+   =============================== */
+
+/* HARD REMOVE SLIDER LABEL HIGHLIGHT (Streamlit 2025 DOM) */
+[data-testid="stSlider"] label span {
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Also kill any leftover badge wrappers */
+[data-testid="stSlider"] div[role="presentation"] span {
+    background: transparent !important;
+}
